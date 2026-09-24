@@ -1,0 +1,20 @@
+# Bagimliliklar
+node_modules/
+
+# Playwright ciktilari
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
+/.features-gen/
+
+# Ortam degiskenleri
+.env
+.env.local
+
+# Editor / isletim sistemi
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

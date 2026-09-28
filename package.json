@@ -1,12 +1,14 @@
 {
-  "name": "playwright-pom-ecommerce",
+  "name": "saucedemo-playwright-e2e",
   "version": "1.0.0",
-  "description": "Playwright test automation project with POM structure for e-commerce testing",
+  "description": "Playwright + TypeScript end-to-end tests with Page Object Model for the SauceDemo e-commerce site",
   "scripts": {
-    "test": "npx playwright test",
-    "test:headed": "npx playwright test --headed",
-    "test:ui": "npx playwright test --ui",
-    "report": "npx playwright show-report"
+    "test": "playwright test",
+    "test:chromium": "playwright test --project=chromium",
+    "test:headed": "playwright test --headed --project=chromium",
+    "test:ui": "playwright test --ui",
+    "typecheck": "tsc --noEmit",
+    "report": "playwright show-report"
   },
   "devDependencies": {
     "@playwright/test": "^1.40.0",

@@ -93,6 +93,12 @@ export class CheckoutPage extends BasePage {
    * Tamamlama mesajının görünür olup olmadığını kontrol et
    */
   async isOrderComplete(): Promise<boolean> {
-    return await this.completeHeader.isVisible();
+    // isVisible() beklemez; sipariş sonrası sayfa geçişi için görünür olmasını bekle
+    try {
+      await this.completeHeader.waitFor({ state: 'visible', timeout: 5000 });
+      return true;
+    } catch {
+      return false;
+    }
   }
 }

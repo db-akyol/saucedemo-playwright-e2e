@@ -36,6 +36,8 @@ export class InventoryPage extends BasePage {
    * Sayfa başlığını al
    */
   async getPageTitle(): Promise<string> {
+    // SPA geçişinde eski sayfanın başlığını okumamak için ürün listesinin render edilmesini bekle
+    await this.inventoryItems.first().waitFor();
     return await this.pageTitle.textContent() || '';
   }
 
@@ -43,6 +45,8 @@ export class InventoryPage extends BasePage {
    * Tüm ürünlerin sayısını al
    */
   async getProductCount(): Promise<number> {
+    // count() otomatik beklemez; önce listenin render edilmesini bekle
+    await this.inventoryItems.first().waitFor();
     return await this.inventoryItems.count();
   }
 

@@ -50,7 +50,7 @@ export const Products = {
 };
 
 export const ErrorMessages = {
-  LOCKED_OUT: 'Epic sadance: Sorry, this user has been locked out.',
+  LOCKED_OUT: 'Epic sadface: Sorry, this user has been locked out.',
   INVALID_CREDENTIALS: 'Epic sadface: Username and password do not match any user in this service',
   MISSING_USERNAME: 'Epic sadface: Username is required',
   MISSING_PASSWORD: 'Epic sadface: Password is required',
